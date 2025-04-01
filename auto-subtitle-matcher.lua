@@ -6,7 +6,7 @@ local utils = require 'mp.utils'
 local msg = require 'mp.msg'
 
 -- 调试模式，设置为true将输出更多信息
-local debug_mode = true -- Enable debug mode for testing
+local debug_mode = false -- Enable debug mode for testing
 
 -- Function to URL decode a string (basic implementation)
 local function url_decode(str)

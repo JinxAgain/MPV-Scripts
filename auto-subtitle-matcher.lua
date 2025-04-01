@@ -68,7 +68,7 @@ local function extract_tv_info(filename)
     if not filename then return nil, nil, nil end
     if debug_mode then msg.info("Extracting TV info from: " .. filename) end
     -- Match pattern: name.S01E01; name S01E01
-    local name, season, episode = filename:match("(.+)[%.%s]S(%d%d)E(%d%d)[%.%s]")
+    local name, season, episode = filename:match("(.+)[%.%s][sS](%d%d)[eE](%d%d)[%.%s]")
 
     if name and season and episode then
         name = clean_movie_name(name)

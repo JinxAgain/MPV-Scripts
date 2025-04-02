@@ -32,8 +32,11 @@ function on_file_loaded()
     -- Check if the path is an HTTP URL
     if path and string.match(path, "^https?://") then
         local filename = extract_filename(path)
-        
+
         if filename then
+            mp.set_property("filename", filename)
+            mp.set_property("stream-path", filename)
+
             -- Set the window title (the most visible title)
             mp.set_property("title", filename)
             

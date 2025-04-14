@@ -40,6 +40,9 @@ local function clean_movie_name(name)
     if english_name and english_name:match("%S") then -- check if it contains non-whitespace
         name = english_name
     end
+
+    -- Trim leading/trailing spaces
+    name = name:gsub("^%s*(.-)%s*$", "%1")
     
     return name
 end

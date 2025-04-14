@@ -159,7 +159,8 @@ local function scan_directory_for_subtitles(dir_path, video_filename, subtitles_
                 sub_ext:lower() == "srt" or
                 sub_ext:lower() == "ass" or
                 sub_ext:lower() == "ssa" or
-                sub_ext:lower() == "sub"
+                sub_ext:lower() == "sub" or
+                sub_ext:lower() == "sup"
             ) then
                 if debug_mode then
                     msg.info("Checking subtitle file: " .. file)
